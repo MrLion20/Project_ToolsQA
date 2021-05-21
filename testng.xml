@@ -4,6 +4,7 @@
     <test verbose="2" preserve-order="true" name="C:/Proyectos/Proyecto-ToolsQA">
         <classes>
             <class name="Test_1">
+
             </class>
         </classes>
     </test>

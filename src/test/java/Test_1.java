@@ -12,6 +12,7 @@ public class Test_1 {
     private static final WebDriver driver = new ChromeDriver();
     PageObject pageobject = new PageObject(driver);
 
+
     @BeforeSuite
     public void BeforeSuit() {
         pageobject.BeforeSuit();
@@ -20,6 +21,7 @@ public class Test_1 {
     @Test(priority = 1)
     public void test_1() throws InterruptedException {
         pageobject.CargaPagina();
+        pageobject.Pagina_Formulario();
     }
     @AfterSuite
     public void AfterSuite() {
