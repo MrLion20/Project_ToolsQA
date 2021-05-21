@@ -1,7 +1,7 @@
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.List;
 
@@ -11,14 +11,8 @@ public class Basepage {
 
     public Basepage(WebDriver driver){
         this.driver = driver;
+        PageFactory.initElements(driver, this);
     }
-    // aca se llama el ChromeConnection para que se pueda utilizar llamando las paginas que se van a probar
-    public WebDriver chromeDriverConnection() {
-        System.setProperty("webdriver.chrome.driver", "./src/test/resources/chromedriver/chromedriver.exe");
-        driver = new ChromeDriver();
-        return driver;
-    }
-
     // Aca se definen variables como la locator para que sea mas sencilla la busqueda de los elementos en los test.
 
     public WebElement findElement(By locator) {
