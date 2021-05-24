@@ -110,7 +110,7 @@ public class PageObject extends Basepage {
         test.pass("Prueba Cargar_Pagina Completa");
     }
 
-    //Test Entrar a pagina de Formularios y llenar Datos
+    //Test Entrar a pagina de Formularios
     public void Pagina_Formulario() throws InterruptedException {
         Thread.sleep(2000);
         ExtentTest test = extent.createTest("Ingreso a Pagina Formulario");

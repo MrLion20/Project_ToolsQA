@@ -22,6 +22,7 @@ public class Test_1 {
     public void test_1() throws InterruptedException {
         pageobject.CargaPagina();
         pageobject.Pagina_Formulario();
+        pageobject.Ingresar_informacion();
     }
     @AfterSuite
     public void AfterSuite() {
