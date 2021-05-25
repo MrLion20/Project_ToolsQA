@@ -10,6 +10,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.Select;
 
 public class PageObject extends Basepage {
 
@@ -200,5 +201,27 @@ public class PageObject extends Basepage {
             System.out.print("No se encuentra en la pagina correcta para ingresar los datos ");
         }
 
+    }
+
+    //Tests Para Seleccionar Fecha
+
+    public String seleccionMes() {
+        click(Cal_box);
+        Select selectmonth = new Select(findElement(Select_month));
+        selectmonth.selectByVisibleText("February");
+        return getText(selectmonth.getFirstSelectedOption());
+    }
+    public String seleccionYear() {
+        Select selectyear = new Select(findElement(Select_year));
+        selectyear.selectByVisibleText("1997");
+        return getText(selectyear.getFirstSelectedOption());
+    }
+    public void seleccionDia() throws InterruptedException {
+        click(Select_dia20);
+        Thread.sleep(2000);
+        click(Btn_Submit);
+        Thread.sleep(2000);
+        click(Btn_CloseModel);
+        Thread.sleep(2000);
     }
 }

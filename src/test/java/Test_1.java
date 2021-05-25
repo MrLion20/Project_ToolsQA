@@ -22,7 +22,13 @@ public class Test_1 {
     public void test_1() throws InterruptedException {
         pageobject.CargaPagina();
         pageobject.Pagina_Formulario();
+    }
+    @Test(priority = 2)
+    public void test_2() throws InterruptedException{
         pageobject.Ingresar_informacion();
+        pageobject.seleccionMes();
+        pageobject.seleccionYear();
+        pageobject.seleccionDia();
     }
     @AfterSuite
     public void AfterSuite() {
